@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wT8-o7-Az3">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -26,7 +26,7 @@
                                 <size key="shadowOffset" width="5" height="5"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="water" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YrO-GZ-gPL">
-                                <rect key="frame" x="229.5" y="180" width="82.5" height="44.5"/>
+                                <rect key="frame" x="229.5" y="178" width="82.5" height="44.5"/>
                                 <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -145,7 +145,7 @@
                             <constraint firstItem="nuM-2q-nVg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ur3-4G-AsI"/>
                             <constraint firstItem="nuM-2q-nVg" firstAttribute="top" secondItem="mvQ-VD-1aK" secondAttribute="bottom" constant="15" id="aqD-m3-0BC"/>
                             <constraint firstItem="Gid-vl-SfP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dEY-Fq-Fjn"/>
-                            <constraint firstItem="YrO-GZ-gPL" firstAttribute="top" secondItem="7j2-A7-Onc" secondAttribute="top" constant="42" id="iNP-7b-vUv"/>
+                            <constraint firstItem="YrO-GZ-gPL" firstAttribute="top" secondItem="7j2-A7-Onc" secondAttribute="top" constant="40" id="iNP-7b-vUv"/>
                             <constraint firstItem="KQI-Pc-tkZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-10" id="nrz-44-ddW"/>
                             <constraint firstItem="dHj-dr-mKq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r1e-sO-IdV"/>
                             <constraint firstItem="KQI-Pc-tkZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sIR-qJ-5N7"/>
@@ -165,8 +165,102 @@
                     <view key="view" contentMode="scaleToFill" id="AeF-Tt-l0H">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GET SOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Uc-Hz-sz0">
+                                <rect key="frame" x="100" y="138" width="214.5" height="59"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemTealColor"/>
+                                <size key="shadowOffset" width="6" height="7"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="set your reminder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbz-aC-Yej">
+                                <rect key="frame" x="92" y="178" width="230" height="41.5"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemTealColor"/>
+                                <size key="shadowOffset" width="5" height="5"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="1 hour" translatesAutoresizingMaskIntoConstraints="NO" id="kDB-Wo-Npm">
+                                <rect key="frame" x="182.5" y="289.5" width="51" height="31"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="1 hour" translatesAutoresizingMaskIntoConstraints="NO" id="DUP-UE-xjU">
+                                <rect key="frame" x="182.5" y="370.5" width="51" height="31"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="1 hour" translatesAutoresizingMaskIntoConstraints="NO" id="XtK-Ao-2hS">
+                                <rect key="frame" x="182.5" y="451.5" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0d-w1-iaB">
+                                <rect key="frame" x="92" y="284" width="96" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemTealColor"/>
+                                <size key="shadowOffset" width="2" height="3"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2 hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAI-7p-1M2">
+                                <rect key="frame" x="92" y="365" width="96" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemTealColor"/>
+                                <size key="shadowOffset" width="2" height="3"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3 hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecX-hf-QFi">
+                                <rect key="frame" x="92" y="446" width="96" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemTealColor"/>
+                                <size key="shadowOffset" width="2" height="3"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cdV-R9-diN">
+                                <rect key="frame" x="90" y="788" width="234" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemTealColor"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="what time do you sleep?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDX-QB-cX4">
+                                <rect key="frame" x="95" y="543" width="225" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemTealColor"/>
+                                <size key="shadowOffset" width="2" height="3"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="how much do you sleep?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lx1-sl-ahc">
+                                <rect key="frame" x="95" y="743" width="225" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemTealColor"/>
+                                <size key="shadowOffset" width="2" height="3"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZdX-8N-cXC">
+                                <rect key="frame" x="0.0" y="573" width="414" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dzW-OS-gYc"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="linkColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XtK-Ao-2hS" firstAttribute="top" secondItem="DUP-UE-xjU" secondAttribute="bottom" constant="50" id="3OW-xP-PWU"/>
+                            <constraint firstItem="XtK-Ao-2hS" firstAttribute="centerX" secondItem="AeF-Tt-l0H" secondAttribute="centerX" id="7Ox-Bm-I0A"/>
+                            <constraint firstItem="kDB-Wo-Npm" firstAttribute="top" secondItem="cbz-aC-Yej" secondAttribute="bottom" constant="70" id="B5u-d9-r5f"/>
+                            <constraint firstItem="cbz-aC-Yej" firstAttribute="top" secondItem="9Uc-Hz-sz0" secondAttribute="top" constant="40" id="IiD-kJ-H9b"/>
+                            <constraint firstItem="DUP-UE-xjU" firstAttribute="top" secondItem="kDB-Wo-Npm" secondAttribute="bottom" constant="50" id="XYB-ug-eHq"/>
+                            <constraint firstItem="kDB-Wo-Npm" firstAttribute="centerX" secondItem="AeF-Tt-l0H" secondAttribute="centerX" id="Xg8-bI-OQQ"/>
+                            <constraint firstItem="DUP-UE-xjU" firstAttribute="centerX" secondItem="AeF-Tt-l0H" secondAttribute="centerX" id="ZjX-N5-Wg6"/>
+                            <constraint firstItem="9Uc-Hz-sz0" firstAttribute="top" secondItem="dzW-OS-gYc" secondAttribute="top" constant="50" id="ak0-Cb-ECp"/>
+                            <constraint firstItem="cbz-aC-Yej" firstAttribute="centerX" secondItem="AeF-Tt-l0H" secondAttribute="centerX" id="enW-LK-ZQr"/>
+                            <constraint firstItem="9Uc-Hz-sz0" firstAttribute="centerX" secondItem="AeF-Tt-l0H" secondAttribute="centerX" id="pPt-iL-gtU"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4fc-jZ-qCx"/>
                 </viewController>
@@ -182,7 +276,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="iCg-3b-ML1"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="tintColor"/>
+                        <color key="tintColor" systemColor="tintColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Mqe-86-P5G"/>
                 </viewController>
@@ -225,6 +320,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
