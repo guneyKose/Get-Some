@@ -404,7 +404,6 @@
                                             </attributes>
                                         </fragment>
                                     </attributedString>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" systemColor="systemTealColor"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -457,14 +456,39 @@
                     <view key="view" contentMode="scaleToFill" id="wTY-Ev-JeG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GET SOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRK-dy-oHA">
+                                <rect key="frame" x="101.5" y="138" width="211.5" height="55"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemTealColor"/>
+                                <size key="shadowOffset" width="3" height="3"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="calculate your water need" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95E-2Y-8fn">
+                                <rect key="frame" x="27" y="193" width="360.5" height="42.5"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemTealColor"/>
+                                <size key="shadowOffset" width="3" height="3"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="XIo-lJ-P8x"/>
                         <color key="backgroundColor" systemColor="tintColor"/>
+                        <constraints>
+                            <constraint firstItem="bRK-dy-oHA" firstAttribute="top" secondItem="XIo-lJ-P8x" secondAttribute="top" constant="50" id="AkG-2f-Sv9"/>
+                            <constraint firstItem="95E-2Y-8fn" firstAttribute="centerX" secondItem="wTY-Ev-JeG" secondAttribute="centerX" id="Ct2-Vs-a4F"/>
+                            <constraint firstItem="95E-2Y-8fn" firstAttribute="top" secondItem="bRK-dy-oHA" secondAttribute="bottom" id="E0N-Ng-jx1"/>
+                            <constraint firstItem="95E-2Y-8fn" firstAttribute="top" secondItem="bRK-dy-oHA" secondAttribute="bottom" id="a4S-nQ-Rij"/>
+                            <constraint firstItem="bRK-dy-oHA" firstAttribute="centerX" secondItem="wTY-Ev-JeG" secondAttribute="centerX" id="s72-Pk-p9d"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="E9d-en-Faq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gGf-K2-GDI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2784" y="427"/>
+            <point key="canvasLocation" x="2936" y="116"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="H7g-3K-GI1">
