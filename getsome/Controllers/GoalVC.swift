@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import AVFoundation
 
 class GoalVC: UIViewController {
 
+    var player: AVAudioPlayer!
     var goal: Float = 0
     var size: Float = 0
+    static var requiredGlassQuantity: Int = 0
     static var progressValue: Float = 0
     
     @IBOutlet weak var goalLabel: UILabel!
@@ -30,7 +33,14 @@ class GoalVC: UIViewController {
     @IBAction func doneButtonPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
         GoalVC.progressValue = size / goal
-        ViewController().progress = GoalVC.progressValue
-        print(GoalVC.progressValue)
+        if size != 0 {
+            GoalVC.requiredGlassQuantity = Int(goal / size)
+        }
+        playSound()
+    }
+    func playSound() {
+        let url = Bundle.main.url(forResource: "water", withExtension: "wav")
+        player = try! AVAudioPlayer(contentsOf: url!)
+        player.play()
     }
 }
