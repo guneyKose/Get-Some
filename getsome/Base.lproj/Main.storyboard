@@ -158,10 +158,10 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="115.84821428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Reminder View Controller-->
         <scene sceneID="uhL-sO-3RD">
             <objects>
-                <viewController id="5UR-38-H2p" sceneMemberID="viewController">
+                <viewController id="5UR-38-H2p" customClass="ReminderViewController" customModule="getsome" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AeF-Tt-l0H">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -182,14 +182,23 @@
                                 <color key="shadowColor" systemColor="systemTealColor"/>
                                 <size key="shadowOffset" width="3" height="3"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="1 hour" translatesAutoresizingMaskIntoConstraints="NO" id="kDB-Wo-Npm">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="1 hour" translatesAutoresizingMaskIntoConstraints="NO" id="kDB-Wo-Npm">
                                 <rect key="frame" x="182.5" y="294.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="oneHourSwitched:" destination="5UR-38-H2p" eventType="valueChanged" id="hR3-F8-1sA"/>
+                                </connections>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="1 hour" translatesAutoresizingMaskIntoConstraints="NO" id="DUP-UE-xjU">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="1 hour" translatesAutoresizingMaskIntoConstraints="NO" id="DUP-UE-xjU">
                                 <rect key="frame" x="182.5" y="375.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="twoHourSwitched:" destination="5UR-38-H2p" eventType="valueChanged" id="G46-y7-a27"/>
+                                </connections>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="1 hour" translatesAutoresizingMaskIntoConstraints="NO" id="XtK-Ao-2hS">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="1 hour" translatesAutoresizingMaskIntoConstraints="NO" id="XtK-Ao-2hS">
                                 <rect key="frame" x="182.5" y="456.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="threeHourSwitched:" destination="5UR-38-H2p" eventType="valueChanged" id="wVW-IP-8ix"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0d-w1-iaB">
                                 <rect key="frame" x="90" y="284" width="77.5" height="45"/>
@@ -313,6 +322,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4fc-jZ-qCx"/>
+                    <connections>
+                        <outlet property="oneHourSwitch" destination="kDB-Wo-Npm" id="9yu-fE-yAR"/>
+                        <outlet property="threeHourSwitch" destination="XtK-Ao-2hS" id="l7C-PI-X1v"/>
+                        <outlet property="twoHourSwitch" destination="DUP-UE-xjU" id="tcK-Do-VKC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vqY-cO-40T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -14,6 +14,7 @@
 		3091EA3527A2DA7A00249DFA /* getsome.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3091EA3327A2DA7A00249DFA /* getsome.xcdatamodeld */; };
 		3091EA3727A2DA7C00249DFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3091EA3627A2DA7C00249DFA /* Assets.xcassets */; };
 		3091EA3A27A2DA7C00249DFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3091EA3827A2DA7C00249DFA /* LaunchScreen.storyboard */; };
+		30BC9C4A27A6BF3C00463AA2 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BC9C4927A6BF3C00463AA2 /* ReminderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3091EA3627A2DA7C00249DFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3091EA3927A2DA7C00249DFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3091EA3B27A2DA7C00249DFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30BC9C4927A6BF3C00463AA2 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				3091EA2A27A2DA7A00249DFA /* AppDelegate.swift */,
 				3091EA2C27A2DA7A00249DFA /* SceneDelegate.swift */,
 				3091EA2E27A2DA7A00249DFA /* ViewController.swift */,
+				30BC9C4927A6BF3C00463AA2 /* ReminderViewController.swift */,
 				3091EA3027A2DA7A00249DFA /* Main.storyboard */,
 				3091EA3627A2DA7C00249DFA /* Assets.xcassets */,
 				3091EA3827A2DA7C00249DFA /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				3091EA3527A2DA7A00249DFA /* getsome.xcdatamodeld in Sources */,
 				3091EA2F27A2DA7A00249DFA /* ViewController.swift in Sources */,
+				30BC9C4A27A6BF3C00463AA2 /* ReminderViewController.swift in Sources */,
 				3091EA2B27A2DA7A00249DFA /* AppDelegate.swift in Sources */,
 				3091EA2D27A2DA7A00249DFA /* SceneDelegate.swift in Sources */,
 			);
