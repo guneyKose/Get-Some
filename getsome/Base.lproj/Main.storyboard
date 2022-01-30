@@ -98,7 +98,7 @@
                                     <action selector="drinkButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Spw-wX-U1B"/>
                                 </connections>
                             </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nuM-2q-nVg">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nuM-2q-nVg">
                                 <rect key="frame" x="82" y="446" width="250" height="4"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="tintColor" systemColor="systemTealColor"/>

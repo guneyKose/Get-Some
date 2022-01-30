@@ -13,11 +13,14 @@ class ViewController: UIViewController {
     var numberOfGlassesLeft = 0
     var progress: Float = 0
 
-    
     @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var goalLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
     
+    override func viewDidAppear(_ animated: Bool) {
+        progress = GoalVC.progressValue
+        print("printing progress value",progress)
+    }
     
     @IBAction func drinkButtonPressed(_ sender: UIButton) {
         numberOfGlasses += 1
