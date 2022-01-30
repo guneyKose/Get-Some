@@ -7,16 +7,11 @@
 
 import UIKit
 
-class ReminderViewController: UIViewController {
+class ReminderVC: UIViewController {
     
     @IBOutlet weak var oneHourSwitch: UISwitch!
     @IBOutlet weak var twoHourSwitch: UISwitch!
     @IBOutlet weak var threeHourSwitch: UISwitch!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
     
     @IBAction func oneHourSwitched(_ sender: UISwitch) {
         twoHourSwitch.isOn = oneHourSwitch.isOn ? false:false
@@ -31,6 +26,9 @@ class ReminderViewController: UIViewController {
         twoHourSwitch.isOn = threeHourSwitch.isOn ? false:false
     }
     
+    @IBAction func doneButtonPressed(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
     
     
     

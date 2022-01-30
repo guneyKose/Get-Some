@@ -158,10 +158,10 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="115.84821428571428"/>
         </scene>
-        <!--Reminder View Controller-->
+        <!--ReminderVC-->
         <scene sceneID="uhL-sO-3RD">
             <objects>
-                <viewController id="5UR-38-H2p" customClass="ReminderViewController" customModule="getsome" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5UR-38-H2p" customClass="ReminderVC" customModule="getsome" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AeF-Tt-l0H">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -287,6 +287,9 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" systemColor="systemTealColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="5UR-38-H2p" eventType="touchUpInside" id="nu8-mg-pw2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dzW-OS-gYc"/>
@@ -421,7 +424,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemTealColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="efA-8C-4aV" kind="show" id="YTR-Ez-8aT"/>
+                                    <segue destination="efA-8C-4aV" kind="presentation" id="YTR-Ez-8aT"/>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bOZ-2a-rgf">
@@ -468,11 +471,11 @@
             <objects>
                 <viewController id="efA-8C-4aV" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wTY-Ev-JeG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GET SOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRK-dy-oHA">
-                                <rect key="frame" x="101.5" y="138" width="211.5" height="55"/>
+                                <rect key="frame" x="101.5" y="50" width="211.5" height="55"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -480,7 +483,7 @@
                                 <size key="shadowOffset" width="3" height="3"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="calculate your water need" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95E-2Y-8fn">
-                                <rect key="frame" x="27" y="193" width="360.5" height="42.5"/>
+                                <rect key="frame" x="27" y="105" width="360.5" height="42.5"/>
                                 <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
