@@ -335,10 +335,10 @@
             </objects>
             <point key="canvasLocation" x="1994.2028985507247" y="-216.29464285714286"/>
         </scene>
-        <!--View Controller-->
+        <!--GoalVC-->
         <scene sceneID="doC-la-SGV">
             <objects>
-                <viewController id="1AF-Ie-4mL" sceneMemberID="viewController">
+                <viewController id="1AF-Ie-4mL" customClass="GoalVC" customModule="getsome" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NMD-Ja-I6U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -359,12 +359,15 @@
                                 <color key="shadowColor" systemColor="systemTealColor"/>
                                 <size key="shadowOffset" width="3" height="3"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dWj-Hg-f66">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3.5" minValue="1" maxValue="6" translatesAutoresizingMaskIntoConstraints="NO" id="dWj-Hg-f66">
                                 <rect key="frame" x="82" y="433" width="250" height="31"/>
                                 <color key="tintColor" systemColor="systemTealColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="246" id="7Y3-lA-dVe"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="goalSliderChanged:" destination="1AF-Ie-4mL" eventType="valueChanged" id="P78-k1-GBw"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="what is your goal?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbq-nW-c7N">
                                 <rect key="frame" x="122.5" y="393.5" width="169.5" height="29.5"/>
@@ -403,6 +406,9 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" systemColor="systemTealColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="1AF-Ie-4mL" eventType="touchUpInside" id="hA6-Dx-HZ5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czT-1f-OH9">
                                 <rect key="frame" x="91.5" y="668" width="231" height="38"/>
@@ -427,12 +433,15 @@
                                     <segue destination="efA-8C-4aV" kind="presentation" id="YTR-Ez-8aT"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bOZ-2a-rgf">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="bOZ-2a-rgf">
                                 <rect key="frame" x="82" y="522.5" width="250" height="31"/>
                                 <color key="tintColor" systemColor="systemTealColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="246" id="IOe-Ks-NK7"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="sizeSliderChanged:" destination="1AF-Ie-4mL" eventType="valueChanged" id="fuD-r9-YD3"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iCg-3b-ML1"/>
@@ -461,6 +470,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Mqe-86-P5G"/>
+                    <connections>
+                        <outlet property="glassLabel" destination="aG3-ME-JfF" id="G5C-oL-2zp"/>
+                        <outlet property="goalLabel" destination="wbq-nW-c7N" id="yDE-nf-2hk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZH-Vt-671" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
