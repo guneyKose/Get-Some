@@ -53,7 +53,6 @@
                                     <color key="baseBackgroundColor" systemColor="systemTealColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="reminderPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="phY-yk-Z3T"/>
                                     <segue destination="5UR-38-H2p" kind="show" id="HcT-Dc-vun"/>
                                 </connections>
                             </button>
@@ -95,6 +94,9 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" systemColor="systemTealColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="drinkButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Spw-wX-U1B"/>
+                                </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nuM-2q-nVg">
                                 <rect key="frame" x="82" y="446" width="250" height="4"/>
@@ -104,16 +106,19 @@
                                     <constraint firstAttribute="width" constant="250" id="7a1-MR-ka7"/>
                                 </constraints>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="track your progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvQ-VD-1aK">
-                                <rect key="frame" x="95" y="396" width="224" height="35"/>
-                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="track your progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mvQ-VD-1aK">
+                                <rect key="frame" x="10" y="397.5" width="394" height="33.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="394" id="dZP-ah-gYt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="shadowColor" systemColor="systemTealColor"/>
                                 <size key="shadowOffset" width="2" height="2"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="track your progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7p-XD-hVD">
-                                <rect key="frame" x="95" y="465" width="224" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7p-XD-hVD">
+                                <rect key="frame" x="202" y="465" width="10" height="35"/>
                                 <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -138,11 +143,13 @@
                             <constraint firstItem="KQI-Pc-tkZ" firstAttribute="top" secondItem="dHj-dr-mKq" secondAttribute="bottom" constant="20" id="DBq-dH-ZKx"/>
                             <constraint firstItem="D7p-XD-hVD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E55-eF-sqN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YrO-GZ-gPL" secondAttribute="trailing" constant="102" id="FJ9-jf-IGz"/>
+                            <constraint firstItem="mvQ-VD-1aK" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="HbC-e9-Q19"/>
                             <constraint firstItem="7j2-A7-Onc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="I5A-cE-3MX"/>
                             <constraint firstItem="D7p-XD-hVD" firstAttribute="top" secondItem="nuM-2q-nVg" secondAttribute="bottom" constant="15" id="KN6-2Z-obQ"/>
                             <constraint firstItem="Fic-5N-XeV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NqL-Wn-C6X"/>
                             <constraint firstItem="nuM-2q-nVg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SOd-J2-BGF"/>
                             <constraint firstItem="nuM-2q-nVg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ur3-4G-AsI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="mvQ-VD-1aK" secondAttribute="trailing" constant="10" id="Y9L-oM-UTY"/>
                             <constraint firstItem="nuM-2q-nVg" firstAttribute="top" secondItem="mvQ-VD-1aK" secondAttribute="bottom" constant="15" id="aqD-m3-0BC"/>
                             <constraint firstItem="Gid-vl-SfP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dEY-Fq-Fjn"/>
                             <constraint firstItem="YrO-GZ-gPL" firstAttribute="top" secondItem="7j2-A7-Onc" secondAttribute="bottom" id="iNP-7b-vUv"/>
@@ -153,6 +160,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Tyh-ye-Ajv"/>
+                    <connections>
+                        <outlet property="goalLabel" destination="D7p-XD-hVD" id="JfU-XI-zex"/>
+                        <outlet property="progressBar" destination="nuM-2q-nVg" id="7X5-Z2-dW5"/>
+                        <outlet property="progressLabel" destination="mvQ-VD-1aK" id="279-6z-mzb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -528,6 +540,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fjN-rL-k7v">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.2578609993" green="0.5" blue="0.26496164509999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
