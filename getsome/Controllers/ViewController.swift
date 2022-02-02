@@ -9,7 +9,7 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
-
+    
     var numberOfGlasses = 0
     var numberOfGlassesLeft = 0
     var progress: Float = 0
@@ -25,13 +25,20 @@ class ViewController: UIViewController {
     }
     
     @IBAction func drinkButtonPressed(_ sender: UIButton) {
-        numberOfGlasses += 1
+        if progress == 0 {
+            progressLabel.text = "set your goal first!"
+        } else {
+            numberOfGlasses += 1
+            progressBar.progress += progress
+            progressLabel.text = "you drank \(numberOfGlasses) of glasses of water today."
+            goalLabel.text = "\(numberOfGlassesLeft) glasses to go!"
+        }
         if numberOfGlassesLeft > 0 {
             numberOfGlassesLeft -= 1
         }
-        progressBar.progress += progress
-        progressLabel.text = "you drank \(numberOfGlasses) of glasses of water today."
-        goalLabel.text = "\(numberOfGlassesLeft) glasses to go!"
+        if progressBar.progress == 1{
+            progressLabel.text = "you achieved your goal!"
+        }
         playSound()
     }
     func playSound() {
