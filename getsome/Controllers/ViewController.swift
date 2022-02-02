@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var numberOfGlassesLeft = 0
     var progress: Float = 0
     var player: AVAudioPlayer!
+    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Items.plist")
     
     @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var goalLabel: UILabel!
@@ -22,8 +23,8 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         progress = GoalVC.progressValue
         numberOfGlassesLeft = GoalVC.requiredGlassQuantity
+        saveData()
     }
-    
     @IBAction func drinkButtonPressed(_ sender: UIButton) {
         if progress == 0 {
             progressLabel.text = "set your goal first!"
@@ -45,6 +46,15 @@ class ViewController: UIViewController {
         let url = Bundle.main.url(forResource: "water", withExtension: "wav")
         player = try! AVAudioPlayer(contentsOf: url!)
         player.play()
+    }
+    func saveData() {
+        let encoder = PropertyListEncoder()
+        do {
+            let data = try encoder.encode(progress)
+            try data.write(to: dataFilePath!)
+        } catch {
+            print(error)
+        }
     }
 }
 
