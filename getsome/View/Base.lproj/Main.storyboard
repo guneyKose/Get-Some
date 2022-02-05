@@ -161,6 +161,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Tyh-ye-Ajv"/>
                     <connections>
+                        <outlet property="drinkButton" destination="KQI-Pc-tkZ" id="HaZ-Ms-8CL"/>
                         <outlet property="goalLabel" destination="D7p-XD-hVD" id="JfU-XI-zex"/>
                         <outlet property="progressBar" destination="nuM-2q-nVg" id="7X5-Z2-dW5"/>
                         <outlet property="progressLabel" destination="mvQ-VD-1aK" id="279-6z-mzb"/>
@@ -465,6 +466,8 @@
                     <connections>
                         <outlet property="glassLabel" destination="aG3-ME-JfF" id="G5C-oL-2zp"/>
                         <outlet property="goalLabel" destination="wbq-nW-c7N" id="yDE-nf-2hk"/>
+                        <outlet property="goalSlider" destination="dWj-Hg-f66" id="G4C-rc-y9V"/>
+                        <outlet property="sizeSlider" destination="bOZ-2a-rgf" id="juK-KB-4I1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZH-Vt-671" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

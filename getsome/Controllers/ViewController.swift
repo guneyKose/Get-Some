@@ -19,11 +19,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var goalLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var drinkButton: UIButton!
     
     override func viewDidAppear(_ animated: Bool) {
         progress = GoalVC.progressValue
         numberOfGlassesLeft = GoalVC.requiredGlassQuantity
+        
         progressBar.progress = defaults.float(forKey: "progressBar")
+        numberOfGlasses = defaults.integer(forKey: "numberOfGlasses")
+        numberOfGlassesLeft = defaults.integer(forKey: "numberOfGlassesLeft")
+        
     }
     @IBAction func drinkButtonPressed(_ sender: UIButton) {
         if progress == 0 {
@@ -37,16 +42,27 @@ class ViewController: UIViewController {
         if numberOfGlassesLeft > 0 {
             numberOfGlassesLeft -= 1
         }
-        if progressBar.progress == 1{
+        if progressBar.progress == 1 {
             progressLabel.text = "you achieved your goal!"
         }
+        
         defaults.set(progressBar.progress, forKey: "progressBar")
+        defaults.set(numberOfGlasses, forKey: "numberOfglasses")
+        defaults.set(numberOfGlassesLeft, forKey: "numberOfGlassesLeft")
+        
         playSound()
     }
     func playSound() {
         let url = Bundle.main.url(forResource: "water", withExtension: "wav")
         player = try! AVAudioPlayer(contentsOf: url!)
         player.play()
+    }
+    func updateUI() {
+        progressBar.progress = 0
+        progressLabel.text = "track your progress"
+        goalLabel.text = ""
+        numberOfGlasses = 0
+        numberOfGlassesLeft = 0
     }
 }
 

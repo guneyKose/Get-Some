@@ -15,10 +15,19 @@ class GoalVC: UIViewController {
     var size: Float = 0
     static var requiredGlassQuantity: Int = 0
     static var progressValue: Float = 0
+    let defaults = UserDefaults.standard
     
+    @IBOutlet weak var goalSlider: UISlider!
+    @IBOutlet weak var sizeSlider: UISlider!
     @IBOutlet weak var goalLabel: UILabel!
     @IBOutlet weak var glassLabel: UILabel!
-  
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        goalSlider.value = defaults.float(forKey: "goal")
+        sizeSlider.value = defaults.float(forKey: "size")
+    }
+    
     @IBAction func sizeSliderChanged(_ sender: UISlider) {
         let sizeString = String(format: "%.1f", sender.value)
         glassLabel.text = "your glass size is \(sizeString) lt."
@@ -36,6 +45,10 @@ class GoalVC: UIViewController {
         if size != 0 {
             GoalVC.requiredGlassQuantity = Int(goal / size)
         }
+        
+        defaults.set(goalSlider.value, forKey: "goal")
+        defaults.set(sizeSlider.value, forKey: "size")
+        
         playSound()
     }
     func playSound() {

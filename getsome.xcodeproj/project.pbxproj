@@ -67,7 +67,7 @@
 				3091EA2A27A2DA7A00249DFA /* AppDelegate.swift */,
 				3091EA2C27A2DA7A00249DFA /* SceneDelegate.swift */,
 				30BC9C4D27A6E7BE00463AA2 /* Controllers */,
-				3091EA3027A2DA7A00249DFA /* Main.storyboard */,
+				30DC89C027AF2219003C042E /* View */,
 				3091EA3627A2DA7C00249DFA /* Assets.xcassets */,
 				3091EA3827A2DA7C00249DFA /* LaunchScreen.storyboard */,
 				3091EA3B27A2DA7C00249DFA /* Info.plist */,
@@ -93,6 +93,14 @@
 				30BC9C4E27A6E94500463AA2 /* water.wav */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		30DC89C027AF2219003C042E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3091EA3027A2DA7A00249DFA /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
