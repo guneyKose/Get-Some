@@ -11,8 +11,12 @@ import AVFoundation
 class GoalVC: UIViewController {
 
     var player: AVAudioPlayer!
-    var goal: Float = 0
-    var size: Float = 0
+    var goal: Float {
+        return goalSlider.value
+    }
+    var size: Float {
+        return sizeSlider.value
+    }
     static var requiredGlassQuantity: Int = 0
     static var progressValue: Float = 0
     let defaults = UserDefaults.standard
@@ -24,6 +28,7 @@ class GoalVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //get the user defaults.
         goalSlider.value = defaults.float(forKey: "goal")
         sizeSlider.value = defaults.float(forKey: "size")
     }
@@ -31,13 +36,10 @@ class GoalVC: UIViewController {
     @IBAction func sizeSliderChanged(_ sender: UISlider) {
         let sizeString = String(format: "%.1f", sender.value)
         glassLabel.text = "your glass size is \(sizeString) lt."
-        size = sender.value
     }
-    
     @IBAction func goalSliderChanged(_ sender: UISlider) {
         let goalString = String(format: "%.1f", sender.value)
         goalLabel.text = "your goal is \(goalString) lt."
-        goal = sender.value
     }
     @IBAction func doneButtonPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
@@ -45,10 +47,10 @@ class GoalVC: UIViewController {
         if size != 0 {
             GoalVC.requiredGlassQuantity = Int(goal / size)
         }
-        
+        //save the slider values as user defaults.
         defaults.set(goalSlider.value, forKey: "goal")
         defaults.set(sizeSlider.value, forKey: "size")
-        
+        defaults.set(GoalVC.progressValue, forKey: "progress")
         playSound()
     }
     func playSound() {

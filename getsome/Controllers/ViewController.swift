@@ -12,7 +12,9 @@ class ViewController: UIViewController {
     
     var numberOfGlasses = 0
     var numberOfGlassesLeft = 0
-    var progress: Float = 0
+    var progress: Float {
+        GoalVC.progressValue
+    }
     var player: AVAudioPlayer!
     let defaults = UserDefaults.standard
     
@@ -22,13 +24,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var drinkButton: UIButton!
     
     override func viewDidAppear(_ animated: Bool) {
-        progress = GoalVC.progressValue
         numberOfGlassesLeft = GoalVC.requiredGlassQuantity
-        
-        progressBar.progress = defaults.float(forKey: "progressBar")
-        numberOfGlasses = defaults.integer(forKey: "numberOfGlasses")
-        numberOfGlassesLeft = defaults.integer(forKey: "numberOfGlassesLeft")
-        
+        if GoalVC.progressValue == 0 {
+            GoalVC.progressValue = defaults.float(forKey: "progress")
+        }
+//        progressBar.progress = defaults.float(forKey: "progressBar")
+//        numberOfGlasses = defaults.integer(forKey: "numberOfGlasses")
+//        numberOfGlassesLeft = defaults.integer(forKey: "numberOfGlassesLeft")
     }
     @IBAction func drinkButtonPressed(_ sender: UIButton) {
         if progress == 0 {
@@ -45,10 +47,9 @@ class ViewController: UIViewController {
         if progressBar.progress == 1 {
             progressLabel.text = "you achieved your goal!"
         }
-        
-        defaults.set(progressBar.progress, forKey: "progressBar")
-        defaults.set(numberOfGlasses, forKey: "numberOfglasses")
-        defaults.set(numberOfGlassesLeft, forKey: "numberOfGlassesLeft")
+//        defaults.set(progressBar.progress, forKey: "progressBar")
+//        defaults.set(numberOfGlasses, forKey: "numberOfglasses")
+//        defaults.set(numberOfGlassesLeft, forKey: "numberOfGlassesLeft")
         
         playSound()
     }

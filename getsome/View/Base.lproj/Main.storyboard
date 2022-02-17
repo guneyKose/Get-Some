@@ -428,7 +428,7 @@
                                     <action selector="doneButtonPressed:" destination="1AF-Ie-4mL" eventType="touchUpInside" id="hA6-Dx-HZ5"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="bOZ-2a-rgf">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.0600000000000001" minValue="0.10000000000000001" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="bOZ-2a-rgf">
                                 <rect key="frame" x="82" y="522.5" width="250" height="31"/>
                                 <color key="tintColor" systemColor="systemTealColor"/>
                                 <constraints>
