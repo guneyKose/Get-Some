@@ -9,6 +9,10 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
+    @IBOutlet weak var progressLabel: UILabel!
+    @IBOutlet weak var goalLabel: UILabel!
+    @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var drinkButton: UIButton!
     
     var numberOfGlasses = 0
     var numberOfGlassesLeft = 0
@@ -18,23 +22,24 @@ class ViewController: UIViewController {
     var player: AVAudioPlayer!
     let defaults = UserDefaults.standard
     
-    @IBOutlet weak var progressLabel: UILabel!
-    @IBOutlet weak var goalLabel: UILabel!
-    @IBOutlet weak var progressBar: UIProgressView!
-    @IBOutlet weak var drinkButton: UIButton!
-    
     override func viewDidAppear(_ animated: Bool) {
         numberOfGlassesLeft = GoalVC.requiredGlassQuantity
         if GoalVC.progressValue == 0 {
             GoalVC.progressValue = defaults.float(forKey: "progress")
         }
-//        progressBar.progress = defaults.float(forKey: "progressBar")
-//        numberOfGlasses = defaults.integer(forKey: "numberOfGlasses")
-//        numberOfGlassesLeft = defaults.integer(forKey: "numberOfGlassesLeft")
+        
+        let savedDay = defaults.integer(forKey: "dayReminder")
+        let currentDateAsDay = Date().get(.day)
+        
+        progressBar.progress = currentDateAsDay > savedDay ? 0 : defaults.float(forKey: "progressBar")
+    
+        //numberOfGlasses = defaults.integer(forKey: "numberOfGlasses")
+        //numberOfGlassesLeft = defaults.integer(forKey: "numberOfGlassesLeft")
     }
+    
     @IBAction func drinkButtonPressed(_ sender: UIButton) {
         if progress == 0 {
-            progressLabel.text = "set your goal first!"
+            performSegue(withIdentifier: "GoalVC", sender: sender)
         } else {
             numberOfGlasses += 1
             progressBar.progress += progress
@@ -47,11 +52,12 @@ class ViewController: UIViewController {
         if progressBar.progress == 1 {
             progressLabel.text = "you achieved your goal!"
         }
-//        defaults.set(progressBar.progress, forKey: "progressBar")
-//        defaults.set(numberOfGlasses, forKey: "numberOfglasses")
-//        defaults.set(numberOfGlassesLeft, forKey: "numberOfGlassesLeft")
-        
+        defaults.set(progressBar.progress, forKey: "progressBar")
+        //defaults.set(numberOfGlasses, forKey: "numberOfglasses")
+        //defaults.set(numberOfGlassesLeft, forKey: "numberOfGlassesLeft")
         playSound()
+        
+        //enum
     }
     func playSound() {
         let url = Bundle.main.url(forResource: "water", withExtension: "wav")

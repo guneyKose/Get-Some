@@ -76,7 +76,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemTealColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="1AF-Ie-4mL" kind="show" id="GlG-Bu-OAG"/>
+                                    <segue destination="1AF-Ie-4mL" kind="show" identifier="GoalVC" id="GlG-Bu-OAG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQI-Pc-tkZ">

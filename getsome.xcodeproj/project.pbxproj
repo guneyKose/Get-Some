@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		306CBE0227C29F82003D838E /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306CBE0127C29F82003D838E /* Date+Extensions.swift */; };
 		3091EA2B27A2DA7A00249DFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3091EA2A27A2DA7A00249DFA /* AppDelegate.swift */; };
 		3091EA2D27A2DA7A00249DFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3091EA2C27A2DA7A00249DFA /* SceneDelegate.swift */; };
 		3091EA2F27A2DA7A00249DFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3091EA2E27A2DA7A00249DFA /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		306CBE0127C29F82003D838E /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		3091EA2727A2DA7A00249DFA /* getsome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = getsome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3091EA2A27A2DA7A00249DFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3091EA2C27A2DA7A00249DFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		306CBE0027C29F74003D838E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				306CBE0127C29F82003D838E /* Date+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		3091EA1E27A2DA7A00249DFA = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +74,7 @@
 		3091EA2927A2DA7A00249DFA /* getsome */ = {
 			isa = PBXGroup;
 			children = (
+				306CBE0027C29F74003D838E /* Extensions */,
 				3091EA2A27A2DA7A00249DFA /* AppDelegate.swift */,
 				3091EA2C27A2DA7A00249DFA /* SceneDelegate.swift */,
 				30BC9C4D27A6E7BE00463AA2 /* Controllers */,
@@ -177,6 +188,7 @@
 			files = (
 				3091EA3527A2DA7A00249DFA /* getsome.xcdatamodeld in Sources */,
 				30BC9C4C27A6C91200463AA2 /* GoalVC.swift in Sources */,
+				306CBE0227C29F82003D838E /* Date+Extensions.swift in Sources */,
 				3091EA2F27A2DA7A00249DFA /* ViewController.swift in Sources */,
 				30BC9C4A27A6BF3C00463AA2 /* ReminderVC.swift in Sources */,
 				3091EA2B27A2DA7A00249DFA /* AppDelegate.swift in Sources */,
